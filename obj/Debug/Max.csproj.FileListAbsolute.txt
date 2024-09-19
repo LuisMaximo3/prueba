@@ -1,0 +1,10 @@
+C:\Users\52624\Documents\Prueba\Max\bin\Debug\Max.exe.config
+C:\Users\52624\Documents\Prueba\Max\bin\Debug\Max.exe
+C:\Users\52624\Documents\Prueba\Max\bin\Debug\Max.pdb
+C:\Users\52624\Documents\Prueba\Max\obj\Debug\Max.csproj.AssemblyReference.cache
+C:\Users\52624\Documents\Prueba\Max\obj\Debug\Max.Form1.resources
+C:\Users\52624\Documents\Prueba\Max\obj\Debug\Max.Properties.Resources.resources
+C:\Users\52624\Documents\Prueba\Max\obj\Debug\Max.csproj.GenerateResource.cache
+C:\Users\52624\Documents\Prueba\Max\obj\Debug\Max.csproj.CoreCompileInputs.cache
+C:\Users\52624\Documents\Prueba\Max\obj\Debug\Max.exe
+C:\Users\52624\Documents\Prueba\Max\obj\Debug\Max.pdb
