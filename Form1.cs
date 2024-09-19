@@ -24,8 +24,12 @@ namespace Max
         {        
             double num1 = 5;
             double num2 = 8;
+
             operaciones op=new operaciones();
             double resultado = op.Suma(num1, num2);
+            double res = op.Multp(num1, num2);
+            double resul = op.Div(num1, num2);
+            double resultad = op.Resta(num1, num2);
         }
         class operaciones
         { 
@@ -42,33 +46,41 @@ namespace Max
             }
             public double Multp(double x, double y)
             {
-
-
                 double resultado = x * y;
-                do
+                if (x != 0 && y != 0) 
                 {
-                    Console.Write(resultado);
-                    resultado++;
+                    Console.WriteLine("El resultado de la multiplicacion es: " + resultado);
                 }
-                while (x != 0 || y != 0);
+                else
+                {
+                    Console.WriteLine("Uno de las variables es 0, por lo que el resultado sera 0");
+                }
                 return resultado;
             }
             public double Div(double x, double y)
             {
-                    double resultado = x * y;
-                    do
-                    {
-                        Console.Write(resultado);
-                        resultado++;
-                    }
-                    while (y != 0);
+                double resultado = x / y;
+                if (x != 0)
+                {
+                    Console.WriteLine("El resultado de la division es: " + resultado);
                     return resultado;
+                }
+                else 
+                {
+                    Console.WriteLine("El numerador es 0, por lo que no se puede hacer tal operacion.");
+                }
+                return resultado;
             }
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
+            double num1 = 5;
+            double num2 = 8;
 
+            operaciones op = new operaciones();
+            double suma= op.Suma(num1, num2);
+            bt_suma.Text = suma.ToString();
         }
     }
 }
