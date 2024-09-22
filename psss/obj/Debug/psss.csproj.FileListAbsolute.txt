@@ -1,0 +1,7 @@
+C:\Users\52624\Documents\Prueba\Max\psss\bin\Debug\psss.exe.config
+C:\Users\52624\Documents\Prueba\Max\psss\bin\Debug\psss.exe
+C:\Users\52624\Documents\Prueba\Max\psss\bin\Debug\psss.pdb
+C:\Users\52624\Documents\Prueba\Max\psss\obj\Debug\psss.csproj.AssemblyReference.cache
+C:\Users\52624\Documents\Prueba\Max\psss\obj\Debug\psss.csproj.CoreCompileInputs.cache
+C:\Users\52624\Documents\Prueba\Max\psss\obj\Debug\psss.exe
+C:\Users\52624\Documents\Prueba\Max\psss\obj\Debug\psss.pdb
