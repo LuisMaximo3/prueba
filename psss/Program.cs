@@ -26,7 +26,7 @@ namespace psss
                     int num1 = 0;
                     int num2 = 0;
                     int num3 = 0;
-                    Console.WriteLine("Saber cual numero es mayor");
+                    Console.WriteLine("Saber cual numero es mayor\n");
                     Console.WriteLine("Dame un numero");
 
                     Console.WriteLine("dame el primer numero");
@@ -38,7 +38,7 @@ namespace psss
                     NumeroMayor(num1, num2, num3);
                     Console.ReadLine();
 
-                    Console.WriteLine("Saber que numero es menor");
+                    Console.WriteLine("Saber que numero es menor\n");
                     Console.WriteLine("Dame un numero");
 
                     Console.WriteLine("dame el primer numero");
