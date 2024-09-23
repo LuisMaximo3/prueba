@@ -14,59 +14,90 @@ namespace psss
            
         static void Main(string[] args)
         {
+            bool continuar = true;
             Console.WriteLine("Ingrese la operacion a la cual quiere usar ");
             Console.WriteLine("1. Numero mayor o menor");
             Console.WriteLine("2. Numeros primos");
+            Console.WriteLine("3. Numero mayor de una lista");
+            Console.WriteLine("4. Salir");
             string oper = Console.ReadLine();
-
-            switch (oper) 
+            while (continuar)
             {
-                case "1": Console.WriteLine("1");
+                switch (oper)
+                {
+                    case "1":
+                        Console.WriteLine("1");
 
-                    int num1 = 0;
-                    int num2 = 0;
-                    int num3 = 0;
-                    Console.WriteLine("Saber cual numero es mayor\n");
-                    Console.WriteLine("Dame un numero");
+                        int num1 = 0;
+                        int num2 = 0;
+                        int num3 = 0;
+                        Console.WriteLine("Saber cual numero es mayor\n");
+                        Console.WriteLine("Dame un numero");
 
-                    Console.WriteLine("dame el primer numero");
-                    num1 = Convert.ToInt32(Console.ReadLine());
-                    Console.WriteLine("dame el segundo numero");
-                    num2 = Convert.ToInt32(Console.ReadLine());
-                    Console.WriteLine("dame el tercer numero");
-                    num3 = Convert.ToInt32(Console.ReadLine());
-                    NumeroMayor(num1, num2, num3);
-                    Console.ReadLine();
+                        Console.WriteLine("dame el primer numero");
+                        num1 = Convert.ToInt32(Console.ReadLine());
+                        Console.WriteLine("dame el segundo numero");
+                        num2 = Convert.ToInt32(Console.ReadLine());
+                        Console.WriteLine("dame el tercer numero");
+                        num3 = Convert.ToInt32(Console.ReadLine());
+                        NumeroMayor(num1, num2, num3);
+                        Console.ReadLine();
 
-                    Console.WriteLine("Saber que numero es menor\n");
-                    Console.WriteLine("Dame un numero");
+                        Console.WriteLine("Saber que numero es menor\n");
+                        Console.WriteLine("Dame un numero");
 
-                    Console.WriteLine("dame el primer numero");
-                    num1 = Convert.ToInt32(Console.ReadLine());
-                    Console.WriteLine("dame el segundo numero");
-                    num2 = Convert.ToInt32(Console.ReadLine());
-                    Console.WriteLine("dame el tercer numero");
-                    num3 = Convert.ToInt32(Console.ReadLine());
-                    NumeroMenor(num1, num2, num3);
-                    Console.ReadLine();
+                        Console.WriteLine("dame el primer numero");
+                        num1 = Convert.ToInt32(Console.ReadLine());
+                        Console.WriteLine("dame el segundo numero");
+                        num2 = Convert.ToInt32(Console.ReadLine());
+                        Console.WriteLine("dame el tercer numero");
+                        num3 = Convert.ToInt32(Console.ReadLine());
+                        NumeroMenor(num1, num2, num3);
+                        Console.ReadLine();
 
 
 
-                    break;
-                case "2": Console.WriteLine("2");
-                    Console.WriteLine("Dame un numero");
+                        break;
+                    case "2":
+                        Console.WriteLine("2");
+                        Console.WriteLine("Dame un numero");
 
-                    int N = 0;
-                    Console.WriteLine("dame el primer numero");
-                    N = Convert.ToInt32(Console.ReadLine());
+                        int N = 0;
+                        Console.WriteLine("dame el primer numero");
+                        N = Convert.ToInt32(Console.ReadLine());
 
-                    Numeros_primo(N);
-                    Console.ReadLine();
+                        Numeros_primo(N);
+                        Console.ReadLine();
 
-                    break;
-                default: 
-                    Console.WriteLine("no hay nada");
-                    break;
+                        break;
+
+                    case "3":
+                        break;
+
+                    case "4":
+                        Console.WriteLine("3");
+                        Console.WriteLine("Saliendo del programa");
+                        break;
+                    default:
+                        Console.WriteLine("no hay nada");
+                        break;
+                }
+                if (continuar) 
+                {
+                    Console.WriteLine("\n¿Deseas realizar otra operación? (S/N)");
+                    char respuesta = Char.ToUpper(Console.ReadKey().KeyChar);
+
+                    if (respuesta != 'S')
+                    {
+                        continuar = false;
+                        Console.WriteLine("\nSaliendo del programa...");
+                    }
+                    else
+                    {
+                        Console.Clear(); // Limpia la consola para empezar de nuevo
+                    }
+                }
+                Console.WriteLine();
             }
 
 
@@ -148,6 +179,47 @@ namespace psss
                     // 5) termina for de i
                 }
             }
+        }
+        
+        private static void MayorDeUnaLista() 
+        {
+            List<int> lista = new List<int>();
+            bool continuar = true;
+            while (continuar)
+            {
+                Console.WriteLine("Escribe un numero");
+                int numero = Convert.ToInt32(Console.ReadLine());
+                lista.Add(numero);
+                Console.WriteLine("quieres agrega otro numero");
+                Console.WriteLine("S- Si");
+                Console.WriteLine("N- No");
+                continuar = char.ToUpper(Console.ReadKey().KeyChar) == 'S';
+                Console.Clear();
+            }
+            bool esMayor = false;
+            for (int i = 0; i < lista.Count; i++) //for 1
+            {
+                int N= lista[i]; //obtener numero de lista
+                for (int j = 0; j < lista.Count; j++) //for 2
+                {
+                    int M=lista[j];
+                    if (N < M)
+                    {
+                        break;
+                    }
+                    else if (N == M || N > M) 
+                    {
+                        if (j==lista.Count-1) 
+                        {
+                            esMayor = true;
+                        }
+                    }  
+                } 
+             if (!esMayor) { break; }//si no se encuentra aun el mayor pasa a la siguiente interacion
+            }
+            Console.WriteLine("El numero mayor es igua: ");
+
+
         }
     }
 }
