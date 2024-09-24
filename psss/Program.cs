@@ -227,6 +227,7 @@ namespace psss
                     {
                         if (j==lista.Count-1) 
                         {
+                            mayor =N;
                             esMayor = true;
                         }
                     }  
