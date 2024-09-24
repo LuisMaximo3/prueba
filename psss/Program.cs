@@ -15,50 +15,24 @@ namespace psss
         static void Main(string[] args)
         {
             bool continuar = true;
-            Console.WriteLine("Ingrese la operacion a la cual quiere usar ");
-            Console.WriteLine("1. Numero mayor o menor");
-            Console.WriteLine("2. Numeros primos");
-            Console.WriteLine("3. Numero mayor de una lista");
-            Console.WriteLine("4. Salir");
-            string oper = Console.ReadLine();
+
             while (continuar)
             {
+                Console.WriteLine("Ingrese la operacion a la cual quiere usar ");
+                Console.WriteLine("1. Numero mayor o menor");
+                Console.WriteLine("2. Numeros primos");
+                Console.WriteLine("3. Numero mayor de una lista");
+                Console.WriteLine("4. Salir");
+                int oper = Convert.ToInt32(Console.ReadLine());
+
                 switch (oper)
                 {
-                    case "1":
+                    case 1:
                         Console.WriteLine("1");
-
-                        int num1 = 0;
-                        int num2 = 0;
-                        int num3 = 0;
-                        Console.WriteLine("Saber cual numero es mayor\n");
-                        Console.WriteLine("Dame un numero");
-
-                        Console.WriteLine("dame el primer numero");
-                        num1 = Convert.ToInt32(Console.ReadLine());
-                        Console.WriteLine("dame el segundo numero");
-                        num2 = Convert.ToInt32(Console.ReadLine());
-                        Console.WriteLine("dame el tercer numero");
-                        num3 = Convert.ToInt32(Console.ReadLine());
-                        NumeroMayor(num1, num2, num3);
-                        Console.ReadLine();
-
-                        Console.WriteLine("Saber que numero es menor\n");
-                        Console.WriteLine("Dame un numero");
-
-                        Console.WriteLine("dame el primer numero");
-                        num1 = Convert.ToInt32(Console.ReadLine());
-                        Console.WriteLine("dame el segundo numero");
-                        num2 = Convert.ToInt32(Console.ReadLine());
-                        Console.WriteLine("dame el tercer numero");
-                        num3 = Convert.ToInt32(Console.ReadLine());
-                        NumeroMenor(num1, num2, num3);
-                        Console.ReadLine();
-
-
-
+                        Numero_mayor_O_menor();
                         break;
-                    case "2":
+
+                    case 2:
                         Console.WriteLine("2");
                         Console.WriteLine("Dame un numero");
 
@@ -71,13 +45,18 @@ namespace psss
 
                         break;
 
-                    case "3":
+                    case 3:
+                        Console.WriteLine("3");
+                        Console.WriteLine("Numeros de la lista");
+                        MayorDeUnaLista();
+                        
                         break;
 
-                    case "4":
+                    case 4:
                         Console.WriteLine("3");
                         Console.WriteLine("Saliendo del programa");
                         break;
+
                     default:
                         Console.WriteLine("no hay nada");
                         break;
@@ -102,6 +81,37 @@ namespace psss
 
 
         
+        }
+        private static void Numero_mayor_O_menor() 
+        {
+            Console.WriteLine("1");
+
+            int num1 = 0;
+            int num2 = 0;
+            int num3 = 0;
+            Console.WriteLine("Saber cual numero es mayor\n");
+            Console.WriteLine("Dame un numero");
+
+            Console.WriteLine("dame el primer numero");
+            num1 = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("dame el segundo numero");
+            num2 = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("dame el tercer numero");
+            num3 = Convert.ToInt32(Console.ReadLine());
+            NumeroMayor(num1, num2, num3);
+            Console.ReadLine();
+
+            Console.WriteLine("Saber que numero es menor\n");
+            Console.WriteLine("Dame un numero");
+
+            Console.WriteLine("dame el primer numero");
+            num1 = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("dame el segundo numero");
+            num2 = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("dame el tercer numero");
+            num3 = Convert.ToInt32(Console.ReadLine());
+            NumeroMenor(num1, num2, num3);
+            Console.ReadLine();
         }
         private static void NumeroMayor(int num1, int num2, int num3)
         {
@@ -196,15 +206,21 @@ namespace psss
                 continuar = char.ToUpper(Console.ReadKey().KeyChar) == 'S';
                 Console.Clear();
             }
-            bool esMayor = false;
+            int mayor = lista[0];
+            //bool esMayor = false;
             for (int i = 0; i < lista.Count; i++) //for 1
             {
-                int N= lista[i]; //obtener numero de lista
+                if (lista[i] > mayor) // Si encontramos un número mayor, lo actualizamos
+                {
+                    mayor = lista[i];
+                }
+                /**int N= lista[i]; //obtener numero de lista
                 for (int j = 0; j < lista.Count; j++) //for 2
                 {
                     int M=lista[j];
                     if (N < M)
                     {
+                        esMayor = false;
                         break;
                     }
                     else if (N == M || N > M) 
@@ -216,8 +232,9 @@ namespace psss
                     }  
                 } 
              if (!esMayor) { break; }//si no se encuentra aun el mayor pasa a la siguiente interacion
+            **/
             }
-            Console.WriteLine("El numero mayor es igua: ");
+            Console.WriteLine($"El numero mayor es igua: {mayor}");
 
 
         }
