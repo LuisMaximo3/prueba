@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{6635121E-1485-42A5-95F6-9F777D42B1BB}</ProjectGuid>
+    <ProjectGuid>{18CBA9FF-1F34-48E2-814D-3B1E694CE5E6}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>Actividad</RootNamespace>
-    <AssemblyName>Actividad</AssemblyName>
+    <RootNamespace>Tienda</RootNamespace>
+    <AssemblyName>Tienda</AssemblyName>
     <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -43,11 +43,13 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Articulo.cs" />
     <Compile Include="Caja.cs" />
     <Compile Include="Carrito.cs" />
-    <Compile Include="Producto.cs" />
+    <Compile Include="Catalogo.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Ticket.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
