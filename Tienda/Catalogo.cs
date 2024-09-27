@@ -10,6 +10,7 @@ namespace Tienda
     class Catalogo
     {
         private static List<Articulo> Invertario { get; set; }
+        private static List<Articulo> Carrito {get;set;}=new List<Articulo>();
 
 
         private static void LlenarCatalogo()
@@ -34,8 +35,39 @@ namespace Tienda
         }
         public static Articulo BuscarArticuloPorID(int artID) 
         {
-           return Invertario.Find(x => x.ID.Equals(artID));    
+           return Invertario.Find(x => x.ID.Equals(artID)); 
+           
+        }
+
+        public static void TomarArticulo(int artID)
+        {
+            Articulo articulo = BuscarArticuloPorID(artID);
+            if (articulo != null) 
+            {
+                Carrito.Add(articulo);
+                Console.WriteLine($"Se ha agregado {articulo.Nombre} al carrito.");
+            }
+            else
+            {
+                Console.WriteLine("El artículo con el ID ingresado no existe.");            
+            }
 
         }
+        public static void MostrarCarrito()
+        {
+            Console.WriteLine("\nContenido del Carrito:");
+            if (Carrito.Count > 0)
+            {
+                foreach (Articulo art in Carrito)
+                {
+                    Console.WriteLine($"{art.ID} - {art.Nombre} - {art.Precio:C}\n");
+                }
+            }
+            else
+            {
+                Console.WriteLine("El carrito está vacío.");
+            }
+        }
+
     }
 }

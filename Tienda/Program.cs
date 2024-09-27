@@ -15,7 +15,12 @@ namespace Tienda
             int artID=Convert.ToInt32(Console.ReadLine());
 
             Articulo articuloSeleccionado= Catalogo.BuscarArticuloPorID(artID);
+           
+            Catalogo.TomarArticulo(artID);
+            Catalogo.MostrarCarrito();
 
+
+            
             Console.ReadLine();
         }
     }
