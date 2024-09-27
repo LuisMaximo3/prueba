@@ -10,21 +10,13 @@ namespace Tienda
     {
         public List<Articulo> Lista { get; set; }
 
-        public void AgregarProducto(Articulo producto)
+        public Carrito()
         {
-
-            Lista.Add(producto);
-
+            Lista = new List<Articulo>();
         }
-        public void MostrarCarrito()
+        public void AgregarArticulo(Articulo articulo)
         {
-           
-            
-        }
-        public void Pagar()
-        {
-
-
+            Lista.Add(articulo);
         }
     }
 }

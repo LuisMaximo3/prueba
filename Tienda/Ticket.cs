@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -6,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Tienda
 {
-    class Ticket
+     class Ticket
     {
         public List<Articulo> Lista { get; set; }
         public decimal Total { get; set; }
@@ -20,5 +21,9 @@ namespace Tienda
         public int NumCompra { get; set; }
 
         public decimal IVA { get; set; }
-    }
+    }   
+
+
+
+
 }

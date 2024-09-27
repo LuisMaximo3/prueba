@@ -11,16 +11,27 @@ namespace Tienda
         static void Main(string[] args)
         {
             Console.WriteLine("Selecciona el articulo");
-            Catalogo.Mostrar_Catalogo();
-            int artID=Convert.ToInt32(Console.ReadLine());
+            Catalogo.MostrarCatalogo();
+            int artID = Convert.ToInt32(Console.ReadLine());
 
-            Articulo articuloSeleccionado= Catalogo.BuscarArticuloPorID(artID);
-           
-            Catalogo.TomarArticulo(artID);
-            Catalogo.MostrarCarrito();
+            Articulo articuloSeleccionado = Catalogo.BuscarArticuloPorID(artID);
+            Console.WriteLine("Cuantos va a comprar?");
+            articuloSeleccionado.Cantidad = Convert.ToInt32(Console.ReadLine());
+
+            Carrito cart = new Carrito();
+            cart.AgregarArticulo(articuloSeleccionado);
+
+            //ir a la caja
+            Caja caja = new Caja(1);
+            //Mostrar total
+            caja.IngresarCarrito(cart);
+            //Cobrar y Pagar
+            //devolver cambio
+            //imprmir ticket
+            caja.Cobrar();
 
 
-            
+
             Console.ReadLine();
         }
     }
