@@ -10,29 +10,54 @@ namespace Tienda
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Selecciona el articulo");
-            Catalogo.MostrarCatalogo();
-            int artID = Convert.ToInt32(Console.ReadLine());
+            
+            bool otrocarrito = true;
+            int numeroCompra = 1;
+            while (otrocarrito) 
+            {
+                Carrito cart = new Carrito();
 
-            Articulo articuloSeleccionado = Catalogo.BuscarArticuloPorID(artID);
-            Console.WriteLine("Cuantos va a comprar?");
-            articuloSeleccionado.Cantidad = Convert.ToInt32(Console.ReadLine());
+                bool continuar = true;
+                while (continuar)
+                {
+                    Console.WriteLine("Selecciona el articulo");
+                    Catalogo.MostrarCatalogo();
+                    int artID = Convert.ToInt32(Console.ReadLine());
 
-            Carrito cart = new Carrito();
-            cart.AgregarArticulo(articuloSeleccionado);
+                    Articulo articuloSeleccionado = Catalogo.BuscarArticuloPorID(artID);
+                    Console.WriteLine("Cuantos va a comprar?");
+                    articuloSeleccionado.Cantidad = Convert.ToInt32(Console.ReadLine());
 
-            //ir a la caja
-            Caja caja = new Caja(1);
-            //Mostrar total
-            caja.IngresarCarrito(cart);
-            //Cobrar y Pagar
-            //devolver cambio
-            //imprmir ticket
-            caja.Cobrar();
+                    cart.AgregarArticulo(articuloSeleccionado);
+
+                    Console.WriteLine("Quieres agregar otro producto?");
+                    Console.WriteLine("S- Si");
+                    Console.WriteLine("N- No");
+                    continuar = char.ToUpper(Console.ReadKey().KeyChar) == 'S';
+                    Console.Clear();
 
 
 
-            Console.ReadLine();
+
+                    Console.ReadLine();
+                }
+                Caja caja = new Caja(numeroCompra);
+                //Mostrar total
+                caja.IngresarCarrito(cart);
+                //Cobrar y Pagar
+                //devolver cambio
+                //imprmir ticket
+
+                caja.Cobrar();
+
+                Console.WriteLine("Quieres agregar otro carrito?");
+                Console.WriteLine("S- Si");
+                Console.WriteLine("N- No");
+                otrocarrito = char.ToUpper(Console.ReadKey().KeyChar) == 'S';
+                Console.Clear();
+            }
+                Console.ReadLine() ;
+
         }
     }
 }
