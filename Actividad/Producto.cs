@@ -11,23 +11,8 @@ namespace Actividad
         public string Nombre { get; set; }
         public decimal Precio { get; set; }
         public int Cantidad { get; set; }
-        public decimal Total
-        {
-            get; set;
 
-        }
-
-        public void calculartotal()
-        {
-            Total = Precio * Cantidad; 
-        }
-        //public static void sumatotal(Producto SumaTotal)
-        //{
-            
-        //    decimal total = SumaTotal.Cantidad * SumaTotal.Precio;
-        //    SumaTotal.Total = total;
-        //}
-
+        public decimal Total { get; set; }
     }
   
 }

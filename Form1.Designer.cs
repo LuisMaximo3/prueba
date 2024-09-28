@@ -55,7 +55,6 @@
             this.tb_suma.Name = "tb_suma";
             this.tb_suma.Size = new System.Drawing.Size(168, 26);
             this.tb_suma.TabIndex = 1;
-            this.tb_suma.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // label1
             // 

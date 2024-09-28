@@ -77,7 +77,8 @@ namespace Max
 
                 // Calcula la division de x e y.
                 double resultado = x / y;
-
+                if (y == 0)
+                { Console.WriteLine("No hay division sobre 0"); }
                 // Verifica si el numerador es diferente de 0.
                 if (x != 0)
                 {
@@ -86,7 +87,7 @@ namespace Max
                 }
                 else 
                 {
-                    Console.WriteLine("El numerador es 0, por lo que no se puede hacer tal operacion.");
+                    Console.WriteLine("El numerador es 0, el resultado sera 0.");
                 }
                 return resultado;
             
@@ -112,7 +113,6 @@ namespace Max
             tb_multip.Text = multiplicacion.ToString();
             tb_div.Text = division.ToString();
         }
-
 
     }
 }

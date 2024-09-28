@@ -9,7 +9,7 @@ namespace Actividad
 {
     class Carrito
     {
-        public List<Producto> Lista { get; set; }= new List<Producto>();
+        public List<Producto> Lista { get; set; } = new List<Producto>();
 
         public void AgregarProducto(Producto producto)
         {
@@ -19,23 +19,14 @@ namespace Actividad
         }
         public void MostrarCarrito() 
         {
-            Producto a = new Producto();
-            a.calculartotal();
-            decimal total = 0;
-            total = a.Cantidad * a.Precio;
-
-            for (int p = 0; p < Lista.Count; p++)
+            foreach (var producto in Lista)
             {
-                Console.WriteLine($"Nombre: {Lista[p].Nombre}, " +
-                    $"Cantidad: {Lista[p].Cantidad}, " +
-                    $"Precio: {Lista[p].Precio}, " +
-                    $"Total: {Lista[p].Total}" + total);
+                Console.WriteLine($"Nombre: {producto.Nombre}, " +
+                    $"Cantidad: {producto.Cantidad}, " +
+                    $"Precio: ${producto.Precio}, " +
+                    $"Total: ${producto.Total}");
             }
         }
-        public void Pagar() 
-        {
 
-            
-        }
     }
 }

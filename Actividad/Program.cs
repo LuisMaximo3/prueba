@@ -17,7 +17,6 @@ namespace Actividad
             string nombre = "";
             int cantidad = 0;
             decimal precio = 0;
-            decimal total = 0;
             bool continuar = true;
             Carrito carrito = new Carrito();
 
@@ -28,13 +27,14 @@ namespace Actividad
                 Console.WriteLine("ingresa la cantidad");
                 cantidad = Convert.ToInt32(Console.ReadLine());
                 Console.WriteLine("ingresa precio");
-                precio = Convert.ToInt32(Console.ReadLine());
-                
-                Producto prod = new Producto();
-                prod.Nombre = nombre;
-                prod.Precio = precio;
-                prod.Cantidad = cantidad;
-                prod.Total=total;
+                precio = Convert.ToDecimal(Console.ReadLine());
+                Producto prod = new Producto
+                {
+                    Nombre = nombre,
+                    Precio = precio,
+                    Cantidad = cantidad,
+                    Total = cantidad * precio  // Calcular el total del producto
+                };
                 carrito.AgregarProducto(prod);
 
                 Console.WriteLine("Quieres agregar otro producto?");
@@ -47,46 +47,17 @@ namespace Actividad
 
             
 
-
-
-            Caja caja = new Caja();
-            caja.Cobrar(carrito);
-
             carrito.MostrarCarrito();
             Console.ReadLine();
-            /**
-                   MiniTienda prod2 =new MiniTienda()
-                  {
 
-                      prod.Precio = precio;
-                      prod.Nombre = precio;
-                  
-                  }
-                   */        }
-        private static void productos(Carrito carrito) 
-        {
-            // string nombre = "";
-            // int cantidad = 0;
-            // decimal precio = 0;
+            Caja caja = new Caja();
+            caja.IngresarCarrito(carrito);  // Ingresar carrito a la caja
+            Console.ReadLine();
 
-            // Console.WriteLine("ingresa el nombre del producto");
-            // nombre = Console.ReadLine();
-            // Console.WriteLine("ingresa la cantidad");
-            // cantidad = Convert.ToInt32(Console.ReadLine());
-            // Console.WriteLine("ingresa precio");
-            // precio = Convert.ToInt32(Console.ReadLine());
+            caja.Cobrar();
+            Console.ReadLine();
 
-            // Producto prod =new Producto();
-            // prod.Nombre = nombre;
-            // prod.Precio = precio;
-            // prod.Cantidad = cantidad;
-            // carrito.AgregarProducto(prod);
-
-            // Caja caja=new Caja();
-            // caja.Cobrar(carrito);
-
-            //carrito.MostrarCarrito();
-            //Console.WriteLine();
         }
+       
     }
 }

@@ -9,16 +9,32 @@ using System.Threading.Tasks;
 namespace Actividad
 {
     class Caja
-    { 
-        decimal total = 0; 
-     public void Cobrar(Carrito carrito) {
+    {
+        private decimal Pagando { get; set; }
+        public decimal Cambio { get; set; }
+        private Carrito Cart { get; set; }
 
-            foreach (Producto producto in carrito.Lista)
-            { 
-                total+= producto.Cantidad * producto.Precio;
+
+        decimal Total = 0;
+        public void IngresarCarrito(Carrito cart)
+        {
+            Cart = cart;
+            foreach (Producto articulo in cart.Lista)
+            {
+                Total += articulo.Total;
             }
-            Console.WriteLine(total);
-       }
-    }
+            Console.WriteLine($"El total a pagar es: ${Total}");
+        }
+
+        public void Cobrar()
+        {
+            Console.WriteLine("Ingrese cantidad a pagar: ");
+            Pagando = Convert.ToDecimal(Console.ReadLine());
+            Cambio = Pagando - Total;
+            Console.WriteLine($"El cambio es: ${Cambio}");
+        }
+
+    
+    } 
 }
 
