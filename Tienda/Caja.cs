@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net.Sockets;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -38,9 +39,9 @@ namespace Tienda
             float iva = Subtotal * .16f;
             Total = Subtotal + iva;
 
-            Console.WriteLine($"Sub total : ${Subtotal}");
-            Console.WriteLine($"I.V.A. : ${Subtotal * .16}");
-            Console.WriteLine($"Total : ${Total}");
+            Console.WriteLine($"Sub total : ${Subtotal:F2}");
+            Console.WriteLine($"I.V.A. : ${iva:F2}");
+            Console.WriteLine($"Total : ${Total:F2}");
         }
 
 
@@ -49,35 +50,20 @@ namespace Tienda
             Console.WriteLine("Ingrese cantidad a pagar");
             Pagando = Convert.ToDecimal(Console.ReadLine());
             Cambio = (float)Pagando - Total;
-            ImprimirTicket();
+            Ticket ticket = new Ticket();
+            ticket.Lista = Cart.Lista;
+            ticket.Total = (decimal)Total;
+            ticket.Pagado = Pagando;
+            ticket.Cambio = (decimal)Cambio;
+            ticket.Fecha = DateTime.Now;
+            ticket.NumCompra = ++NumCompra;
+            ticket.IVA = (decimal)(Subtotal * 0.16f);
+
+
+            // Imprimir el ticket utilizando el método de la clase Ticket
+            ticket.ImprimirTicket(Numero);
 
         }
-        private void ImprimirTicket()
-        {
-            Console.Clear();
-            NumCompra++;
-            //Fecha
-            DateTime fecha = DateTime.Now;
-            Console.WriteLine($"Fecha: {fecha}");
-
-            //NUm.caja
-            Console.WriteLine($"Caja: {Numero}");
-
-            //Num.Compra
-            Console.WriteLine($"N Compra: {NumCompra}");
-
-
-            //Lsita de articulos
-            foreach (Articulo articulo in Cart.Lista)
-            {
-                Console.WriteLine($"{articulo.Nombre} - ${articulo.Precio} x {articulo.Cantidad} - ${articulo.Precio * articulo.Cantidad}");
-            }
-
-            //IVA
-            MostrarTotales();
-            Console.WriteLine($"Pagado: ${Pagando} ");
-            Console.WriteLine($"Cambio: ${Cambio} ");
-
-        }
+        
     }
 }
