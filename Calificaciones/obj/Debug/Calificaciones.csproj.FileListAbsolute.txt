@@ -9,6 +9,5 @@ C:\Users\52624\Documents\Prueba\Max\Calificaciones\obj\Debug\Calificaciones.cspr
 C:\Users\52624\Documents\Prueba\Max\Calificaciones\obj\Debug\Calificaciones.csproj.CoreCompileInputs.cache
 C:\Users\52624\Documents\Prueba\Max\Calificaciones\obj\Debug\Calificaciones.exe
 C:\Users\52624\Documents\Prueba\Max\Calificaciones\obj\Debug\Calificaciones.pdb
-C:\Users\52624\Documents\Prueba\Max\Calificaciones\obj\Debug\Calificaciones.Calificaciones.resources
-C:\Users\52624\Documents\Prueba\Max\Calificaciones\obj\Debug\Calificaciones.TipoDeMateria.resources
-C:\Users\52624\Documents\Prueba\Max\Calificaciones\obj\Debug\Calificaciones.Alumno.resources
+C:\Users\52624\Documents\Prueba\Max\Calificaciones\obj\Debug\Calificaciones.Alumnos.resources
+C:\Users\52624\Documents\Prueba\Max\Calificaciones\obj\Debug\Calificaciones.RegistrarAlumnos.resources

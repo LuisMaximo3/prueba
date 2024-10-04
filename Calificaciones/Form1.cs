@@ -25,7 +25,7 @@ namespace Calificaciones
         }
         private void VerAlumno(object sender, EventArgs e)
         { 
-            Alumno _alumno = new Alumno();
+            Alumnos _alumno = new Alumnos();
             _alumno.Show(); 
         }
 

@@ -16,16 +16,15 @@ namespace Calificaciones
         {
             InitializeComponent();
         }
-
-        private void TipoDeMateria(object sender, EventArgs e)
-        {
-            TipoDeMateria _tipomat = new TipoDeMateria();
-            _tipomat.Show();
-        }
-
         private void Materias_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void DarAlta_Materia(object sender, EventArgs e) 
+        { 
+            DarAltaMateria darAltaMateria = new DarAltaMateria();
+            darAltaMateria.Show();
         }
     }
 }

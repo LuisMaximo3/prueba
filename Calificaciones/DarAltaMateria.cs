@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Calificaciones.Entidades;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -10,15 +11,20 @@ using System.Windows.Forms;
 
 namespace Calificaciones
 {
-    public partial class Calificaciones : Form
+    public partial class DarAltaMateria : Form
     {
-        public Calificaciones()
+        public DarAltaMateria()
         {
             InitializeComponent();
         }
 
-        private void Calificaciones_Load(object sender, EventArgs e)
+        private void DarAlta(object sender, EventArgs e)
         {
+            DarAltaMateria _profe = new DarAltaMateria()
+            {
+
+            };
+            Central.DarALTAmateria(_profe);
 
         }
     }

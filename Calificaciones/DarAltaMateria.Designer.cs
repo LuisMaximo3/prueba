@@ -1,6 +1,6 @@
 ﻿namespace Calificaciones
 {
-    partial class Calificaciones
+    partial class DarAltaMateria
     {
         /// <summary>
         /// Required designer variable.
@@ -28,33 +28,12 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.button1 = new System.Windows.Forms.Button();
-            this.SuspendLayout();
-            // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(59, 43);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(216, 37);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "Añadir calificacion";
-            this.button1.UseVisualStyleBackColor = true;
-            // 
-            // Calificaciones
-            // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.components = new System.ComponentModel.Container();
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.button1);
-            this.Name = "Calificaciones";
-            this.Text = "Calificaciones";
-            this.Load += new System.EventHandler(this.Calificaciones_Load);
-            this.ResumeLayout(false);
-
+            this.Text = "DarAltaMateria";
         }
 
         #endregion
-
-        private System.Windows.Forms.Button button1;
     }
 }
