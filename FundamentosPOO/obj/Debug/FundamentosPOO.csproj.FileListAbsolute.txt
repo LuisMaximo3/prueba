@@ -1,0 +1,7 @@
+C:\Users\52624\Documents\Prueba\Max\FundamentosPOO\bin\Debug\FundamentosPOO.exe.config
+C:\Users\52624\Documents\Prueba\Max\FundamentosPOO\bin\Debug\FundamentosPOO.exe
+C:\Users\52624\Documents\Prueba\Max\FundamentosPOO\bin\Debug\FundamentosPOO.pdb
+C:\Users\52624\Documents\Prueba\Max\FundamentosPOO\obj\Debug\FundamentosPOO.csproj.AssemblyReference.cache
+C:\Users\52624\Documents\Prueba\Max\FundamentosPOO\obj\Debug\FundamentosPOO.csproj.CoreCompileInputs.cache
+C:\Users\52624\Documents\Prueba\Max\FundamentosPOO\obj\Debug\FundamentosPOO.exe
+C:\Users\52624\Documents\Prueba\Max\FundamentosPOO\obj\Debug\FundamentosPOO.pdb

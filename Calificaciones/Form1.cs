@@ -28,7 +28,11 @@ namespace Calificaciones
             Alumnos _alumno = new Alumnos();
             _alumno.Show(); 
         }
+        private void VerCalifciaciones(object sender, EventArgs e)
+        {
+            FrmCalificaciones _calif = new FrmCalificaciones();
+            _calif.Show();
+        }
 
- 
     }
 }

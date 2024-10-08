@@ -6,9 +6,10 @@ using System.Threading.Tasks;
 
 namespace Calificaciones.Entidades
 {
-     class DarAltaMAterias
-    {
-        public string Nombre_de_Materia { get; set; }
-        public string Nombre_del_Profesor { get; set; }
+     class Response
+    {   
+        public int Codigo { get; set; }
+        public string Mensaje { get; set; }
+        public object Data { get; set; }
     }
 }

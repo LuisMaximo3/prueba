@@ -1,0 +1,1 @@
+insert into Alumnos (id,nombre,apellido,matricula)value('Luis','Perez','')

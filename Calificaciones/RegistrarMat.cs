@@ -5,34 +5,31 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Calificaciones
 {
-    public partial class RegistrarAlumnos : Form
+    public partial class RegistrarMat : Form
     {
-        public RegistrarAlumnos()
+        public RegistrarMat()
         {
             InitializeComponent();
         }
 
-        private void Registrar(object sender, EventArgs e) 
+        private void RegistrarMateria(object sender, EventArgs e)
         {
-            Alumno __alumno = new Alumno()
+            Materia materias = new Materia()
             {
-                Nombre = tb_Nombre.Text,
-                Apellido = tb_Apellido.Text,
-                Matricula = tb_Matricula.Text
+                Nombre = tbnombre.Text,
+                Codigo = tbcodigo.Text
             };
-
-
-            Response resp = Central.RegistrarAlumno(__alumno);
+            Response resp= Central.RegistrarMaterias(materias);
             if (resp.Codigo == 1) { MessageBox.Show(resp.Mensaje); }
             else if (resp.Codigo == 2) { MessageBox.Show(resp.Mensaje, "Error"); }
+
         }
-
-
-    }
+    }   
 }

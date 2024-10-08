@@ -1,0 +1,40 @@
+﻿using Calificaciones.Entidades;
+using System;
+using System.Collections.Generic;
+using System.Data.SqlClient;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Calificaciones
+{
+    class Logger
+    {
+        static string Constrg = "Data Source=LAPTOP-4KONVT6V\\PRACTICA;Initial Catalog=Calificaciones;User ID=sa;Password=1234;TrustServerCertificate=True";
+
+        public static void Log(string mensaje, string metodo, string clase)
+        { 
+            SqlConnection conn = new SqlConnection(Constrg);
+            SqlCommand comm = new SqlCommand("insert into Logger (mensaje,metodo,clase,fecha)values(@mensaje,@metodo,@clase,@fecha)", conn);
+            comm.Parameters.AddWithValue("@mensaje", mensaje);
+            comm.Parameters.AddWithValue("@metodo", metodo);
+            comm.Parameters.AddWithValue("@clase", clase);
+            comm.Parameters.AddWithValue("@fecha",DateTime.Now);
+                
+            try
+            {
+                conn.Open();
+                comm.ExecuteReader();
+            }
+            catch(Exception ex) 
+            {
+            }
+            finally 
+            {
+                conn.Close();
+            }
+            
+        }
+
+    }
+}

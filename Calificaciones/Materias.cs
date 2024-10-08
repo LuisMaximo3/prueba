@@ -20,11 +20,15 @@ namespace Calificaciones
         {
 
         }
-
-        private void DarAlta_Materia(object sender, EventArgs e) 
-        { 
-            DarAltaMateria darAltaMateria = new DarAltaMateria();
-            darAltaMateria.Show();
+        private void Agregarmateria(object sender, EventArgs e)
+        {
+             RegistrarMat _agregarmat = new RegistrarMat();
+            _agregarmat.Show();
         }
+        private void materias_Load(object sender, EventArgs e)
+        {
+            dg_cagarmat.DataSource = Central.CargarAlumnos();
+        }
+
     }
 }

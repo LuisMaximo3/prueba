@@ -11,3 +11,5 @@ C:\Users\52624\Documents\Prueba\Max\Calificaciones\obj\Debug\Calificaciones.exe
 C:\Users\52624\Documents\Prueba\Max\Calificaciones\obj\Debug\Calificaciones.pdb
 C:\Users\52624\Documents\Prueba\Max\Calificaciones\obj\Debug\Calificaciones.Alumnos.resources
 C:\Users\52624\Documents\Prueba\Max\Calificaciones\obj\Debug\Calificaciones.RegistrarAlumnos.resources
+C:\Users\52624\Documents\Prueba\Max\Calificaciones\obj\Debug\Calificaciones.RegistrarMat.resources
+C:\Users\52624\Documents\Prueba\Max\Calificaciones\obj\Debug\Calificaciones.FrmCalificaciones.resources

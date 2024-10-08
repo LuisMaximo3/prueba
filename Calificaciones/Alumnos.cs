@@ -17,19 +17,17 @@ namespace Calificaciones
         {
             InitializeComponent();
         }
-        private void AgragarAlumno(object sender, EventArgs e)
+
+        
+        private  void Alumnos_Load(object sender, EventArgs e)
         {
-            RegistrarAlumnos _registrar= new RegistrarAlumnos();
-            _registrar.Show();
+            gv_alumno.DataSource = Central.CargarAlumnos();
         }
-        private void Registrar(object sender, EventArgs e)
+
+        private void button1_Click(object sender, EventArgs e)
         {
-            Alumno _alumno = new Alumno()
-            {
-
-            };
-            Central.CargarAlumnos(_alumno);
-
+            RegistrarAlumnos _registrar = new RegistrarAlumnos();
+            _registrar.Show();
         }
     }
 }

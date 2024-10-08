@@ -28,81 +28,61 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
+            this.dg_cagarmat = new System.Windows.Forms.DataGridView();
             this.button1 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
+            ((System.ComponentModel.ISupportInitialize)(this.dg_cagarmat)).BeginInit();
             this.SuspendLayout();
             // 
-            // button2
+            // dg_cagarmat
             // 
-            this.button2.Location = new System.Drawing.Point(98, 68);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(156, 56);
-            this.button2.TabIndex = 1;
-            this.button2.Text = "Poo";
-            this.button2.UseVisualStyleBackColor = true;
-            // 
-            // button3
-            // 
-            this.button3.Location = new System.Drawing.Point(98, 145);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(156, 56);
-            this.button3.TabIndex = 2;
-            this.button3.Text = "Algebra";
-            this.button3.UseVisualStyleBackColor = true;
-            // 
-            // button4
-            // 
-            this.button4.Location = new System.Drawing.Point(98, 308);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(156, 56);
-            this.button4.TabIndex = 3;
-            this.button4.Text = "Base de Datos";
-            this.button4.UseVisualStyleBackColor = true;
-            // 
-            // button5
-            // 
-            this.button5.Location = new System.Drawing.Point(98, 228);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(156, 56);
-            this.button5.TabIndex = 4;
-            this.button5.Text = "Ecuaciones Diferenciales";
-            this.button5.UseVisualStyleBackColor = true;
+            this.dg_cagarmat.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dg_cagarmat.Location = new System.Drawing.Point(124, 131);
+            this.dg_cagarmat.Name = "dg_cagarmat";
+            this.dg_cagarmat.RowHeadersWidth = 62;
+            this.dg_cagarmat.RowTemplate.Height = 28;
+            this.dg_cagarmat.Size = new System.Drawing.Size(433, 186);
+            this.dg_cagarmat.TabIndex = 0;
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(490, 68);
+            this.button1.Location = new System.Drawing.Point(113, 45);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(246, 56);
-            this.button1.TabIndex = 5;
-            this.button1.Text = "Dar de alta la materia";
+            this.button1.Size = new System.Drawing.Size(143, 46);
+            this.button1.TabIndex = 1;
+            this.button1.Text = "Agregar";
             this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.DarAlta_Materia);
+            this.button1.Click += new System.EventHandler(this.Agregarmateria);
+            // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(418, 45);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(156, 46);
+            this.button2.TabIndex = 2;
+            this.button2.Text = "Cargar";
+            this.button2.UseVisualStyleBackColor = true;
             // 
             // Materias
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.button5);
-            this.Controls.Add(this.button4);
-            this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);
+            this.Controls.Add(this.button1);
+            this.Controls.Add(this.dg_cagarmat);
             this.Name = "Materias";
             this.Text = "Materias";
             this.Load += new System.EventHandler(this.Materias_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.dg_cagarmat)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button5;
+
+        private System.Windows.Forms.DataGridView dg_cagarmat;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button button2;
     }
 }
