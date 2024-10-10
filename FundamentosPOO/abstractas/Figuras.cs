@@ -12,6 +12,7 @@ namespace FundamentosPOO.abstractas
         protected double Area { get; set; }
         protected double Perimetro { get; set; }
         public string UnidadMedida {  get; set; }
+        public double Apotema {  get; set; }
         public abstract void CacularArea();
         public abstract void CacularPerimetro();
         public void MuestraArea() 

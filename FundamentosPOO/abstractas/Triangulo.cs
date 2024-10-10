@@ -8,7 +8,8 @@ namespace FundamentosPOO.abstractas
 {
     internal class Triangulo : Figuras
     {
-        public int MedidasLados { get; set; }
+        public int Lado1 { get; set; }
+        public int Lado2 { get; set; }
         public int Base { get; set; }
         public int Altura { get; set; }
         public override void CacularArea()
@@ -17,7 +18,7 @@ namespace FundamentosPOO.abstractas
         }
         public override void CacularPerimetro()
         {
-            Perimetro = MedidasLados * 3;
+            Perimetro = Lado1 + Lado2 + Base;
         }
     }
 }

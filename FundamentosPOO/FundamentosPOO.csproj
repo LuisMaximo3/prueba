@@ -46,6 +46,7 @@
     <Compile Include="abstractas\Circulo.cs" />
     <Compile Include="abstractas\Cuadrado.cs" />
     <Compile Include="abstractas\Figuras.cs" />
+    <Compile Include="abstractas\Poligono.cs" />
     <Compile Include="abstractas\Rectangulo.cs" />
     <Compile Include="abstractas\Triangulo.cs" />
     <Compile Include="Interfaces\Admin.cs" />

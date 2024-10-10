@@ -36,7 +36,8 @@ namespace FundamentosPOO
             {
                 Base = 4,
                 Altura = 5,
-                MedidasLados = 4,
+                Lado1 = 4,
+                Lado2 = 3,
                 UnidadMedida="metros"
 
             };
@@ -67,6 +68,19 @@ namespace FundamentosPOO
             circulo.MuestraArea();
             circulo.CacularPerimetro();
             circulo.MuestraPerimetro();
+
+            Console.WriteLine("Piligono regular");
+            Poligono poligono = new Poligono()
+            { 
+                NumLados = 6,
+                lado = 10,
+                UnidadMedida="centimetros"
+            };
+            poligono.CacularArea();
+            poligono.MuestraArea();
+            poligono.CacularPerimetro();
+            poligono.MuestraPerimetro();
+
             Console.ReadLine();
         }
     }
