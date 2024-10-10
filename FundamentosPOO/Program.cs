@@ -69,12 +69,12 @@ namespace FundamentosPOO
             circulo.CacularPerimetro();
             circulo.MuestraPerimetro();
 
-            Console.WriteLine("Piligono regular");
+            Console.WriteLine("Poligono regular");
             Poligono poligono = new Poligono()
             { 
                 NumLados = 6,
                 lado = 10,
-                UnidadMedida="centimetros"
+                UnidadMedida="cm"
             };
             poligono.CacularArea();
             poligono.MuestraArea();
